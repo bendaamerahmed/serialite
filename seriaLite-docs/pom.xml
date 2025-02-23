@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.ahmedbendaamer.serialite</groupId>
+        <groupId>com.serialite</groupId>
         <artifactId>seriaLite-parent</artifactId>
         <version>1.0.0</version>
     </parent>
