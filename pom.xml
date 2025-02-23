@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.serialite</groupId>
+    <artifactId>seriaLite-parent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>seriaLite-core</module>
+        <module>seriaLite-plugins</module>
+        <module>seriaLite-spring-boot</module>
+        <module>seriaLite-benchmarks</module>
+        <module>seriaLite-docs</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <jackson.version>2.15.2</jackson.version>
+        <spring.boot.version>3.4.3</spring.boot.version>
+        <jmh.version>1.36</jmh.version>
+        <messagepack.version>0.9.3</messagepack.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- BOMs or version centralization -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
