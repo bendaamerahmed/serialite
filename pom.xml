@@ -9,6 +9,29 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/bendaamerahmed/serialite.git</connection>
+        <developerConnection>scm:git:ssh://github.com:bendaamerahmed/serialite.git</developerConnection>
+        <url>https://github.com/bendaamerahmed/serialite</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>bendaamerahmed</id>
+            <name>Ahmed Bendaamer</name>
+            <email>ahmed.b.daamer@gmail.com</email>
+        </developer>
+    </developers>
+
     <modules>
         <module>seriaLite-core</module>
         <module>seriaLite-plugins</module>
