@@ -39,5 +39,10 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/bendaamerahmed/serialite</url>
+        </repository>
+    </distributionManagement>
 </project>
