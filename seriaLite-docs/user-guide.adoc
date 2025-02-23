@@ -1,0 +1,50 @@
+= SeriaLite User Guide
+
+:toc:
+:toclevels: 3
+
+== Introduction
+
+SeriaLite is a modular, high-performance serialization library for Java.
+It supports multiple formats, plugin-based extensibility, and Spring Boot integration.
+
+== Quick Start
+
+1. Add the dependency to your project:
+....
+<dependency>
+  <groupId>com.example.serialite</groupId>
+  <artifactId>seriaLite-core</artifactId>
+  <version>1.0.0</version>
+</dependency>
+....
+
+2. Use SeriaLite facade to serialize/deserialize:
+....
+TestObject obj = new TestObject("hello", 1);
+byte[] data = SeriaLite.serialize(obj, "json");
+TestObject clone = SeriaLite.deserialize(data, TestObject.class, "json");
+....
+
+== Plugin System
+
+SeriaLite uses Java's ServiceLoader mechanism to discover new formats automatically.
+Just include the plugin JAR in the classpath.
+
+== Spring Boot Integration
+
+To integrate with Spring Boot:
+* Include `seriaLite-spring-boot` in your classpath.
+* SeriaLiteAutoConfiguration will register a `SeriaLite` bean automatically.
+
+== Performance & Benchmarks
+
+We provide a JMH-based benchmarking module (`seriaLite-benchmarks`) to compare
+SeriaLite with other libraries like Jackson, Kryo, etc.
+
+== References
+
+* https://openjdk.org/projects/code-tools/jmh/[JMH (OpenJDK)]
+* https://github.com/FasterXML/jackson[Jackson Project]
+* https://github.com/msgpack/msgpack-java[MessagePack Java]
+
